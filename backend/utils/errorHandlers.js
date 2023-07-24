@@ -4,7 +4,7 @@ const handleNotFound = (req, res, next) => {
     next(error);
 }
 
-const handleErrors = (req, res, next) => {
+const handleErrors = (error, req, res) => {
     const status = error.status || 500;
     const message = error.message || 'Internal server error';
 
