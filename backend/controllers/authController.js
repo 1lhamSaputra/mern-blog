@@ -6,6 +6,9 @@ const bcrypt = require('bcrypt');
 // Generate Token
 const generateToken = (userId) => {
     const secretKey = process.env.SECRET_KEY;
+    if (!secretKey) {
+        throw new Error("Missing SECRET_KEY environment variable.");
+    }
     const token = jwt.sign({ userId }, secretKey, { expiresIn: '1h' });
     return token;
 }

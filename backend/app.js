@@ -10,9 +10,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // Route
 const authRoute = require("./routes/authRoutes");
-// const postRoute = require("./routes/postRoutes");
+const postRoute = require("./routes/postRoutes");
 
 app.use("/api/auth", authRoute);
-// // app.use("/api/post", postRoute);
+app.use("/api/post", postRoute);
 
 module.exports = app;
