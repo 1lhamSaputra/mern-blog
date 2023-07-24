@@ -1,7 +1,5 @@
 # Blog
 
-Short project description here.
-
 ## Feature
 
 - Create blog posts
