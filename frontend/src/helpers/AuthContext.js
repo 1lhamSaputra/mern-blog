@@ -40,6 +40,7 @@ export const AuthProvider = ({ children }) => {
       const response = await axios.post('http://localhost:3001/api/auth/login', userData);
       setIsLoggedIn(true);
       setCookie('token', response.data.token, 2);
+      navigate('/');
     } catch (error) {
       console.error('Error logging in:', error);
     }
